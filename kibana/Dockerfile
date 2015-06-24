@@ -1,4 +1,4 @@
-FROM docker.io/centos:6
+FROM index.alauda.cn/library/centos:6
 
 RUN yum install -y wget tar
 

@@ -1,4 +1,4 @@
-FROM docker.io/centos:6
+FROM index.alauda.cn/library/centos:6
 
 RUN rpm -i https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.4.5.noarch.rpm
 
