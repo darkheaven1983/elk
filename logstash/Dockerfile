@@ -11,4 +11,8 @@ EXPOSE 5000
 
 ENV JAVA_OPTS -Djava.io.tmpdir=/var/lib/logstash
 
-ENTRYPOINT ["/opt/logstash/bin/logstash", "-f" , "/etc/logstash/conf.d/logstash.conf"]
+ADD run.sh /run.sh
+
+ENTRYPOINT ["/run.sh"]
+
+#ENTRYPOINT ["/opt/logstash/bin/logstash", "-f" , "/etc/logstash/conf.d/logstash.conf"]
