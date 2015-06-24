@@ -1,1 +1,1 @@
-cluster.name: elasticsearch
+cluster.name: ELASTICSEARCH_PORT_9200_TCP_ADDR
