@@ -1,0 +1,18 @@
+elasticsearch:
+  image: index.alauda.cn/darkheaven/elasticsearch
+  ports:
+    - "9200:9200"
+  volume:
+    - /var/lib/elasticsearch:/var/lib/elasticsearch
+kibana:
+  image: index.alauda.cn/darkheaven/kibana
+  ports:
+    - "5601:80"
+  links:
+    - elasticsearch:elaseticsearch
+logstash:
+  image: index.alauda.cn/darkheaven/logstash
+  ports:
+    - "5000:5000"
+  links:
+    - elasticsearch:elasticsearch

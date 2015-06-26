@@ -1,0 +1,24 @@
+elasticsearch:
+  extends:
+    file: ./docker-compose.yml
+    service: elasticsearch
+  expose:
+    - "9200"
+  volumes:
+    - /var/lib/elasticsearch:10
+kibana:
+  extends:
+    file: ./docker-compose.yml
+    service: kibana
+  ports:
+    - "5601/http"
+  links:
+    - elasticsearch:elasticsearch
+logstash:
+  extends:
+    file: ./docker-compose.yml
+    service: logstash
+  ports:
+    - "5000"
+  links:
+    - elasticsearch:elasticsearch 
