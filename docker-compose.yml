@@ -2,7 +2,7 @@ elasticsearch:
   image: index.alauda.cn/darkheaven/elasticsearch
   ports:
     - "9200:9200"
-  volume:
+  volumes:
     - /var/lib/elasticsearch:/var/lib/elasticsearch
 kibana:
   image: index.alauda.cn/darkheaven/kibana
